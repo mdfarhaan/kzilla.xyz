@@ -98,10 +98,10 @@ class Server {
       webhookRoutes
     );
 
-    if (Constants.NODE_ENV !== "development") {
+   /* if (Constants.NODE_ENV !== "development") {
       this.app.post("*", recaptchaMiddleware);
       this.app.put("*", recaptchaMiddleware);
-    }
+    } */
 
     this.app.get(APIEndpoints.Links.GET_LINK, apiLimiter, fetchLink);
 
